@@ -8,7 +8,12 @@ const randomInRange = (min, max) => {
   return Math.floor(Math.random() * (max - min) + min);
 };
 
-let numAttemps = 5;
+const askLimit = () => {
+  rl.question("How many turns would you like? ", (num) => {
+    numAttempts = Number(num);
+    return askRange();
+  });
+};
 
 const askRange = () => {
   rl.question("Enter a min number: ", (minNumber) => {
@@ -42,9 +47,9 @@ const askGuess = () => {
     if (checkGuess(Number(answer)) === true) {
       console.log("You win!");
       rl.close();
-    } else if (checkGuess(Number(answer)) === false) {
-      numAttemps--;
-      if (numAttemps === 0) {
+    } else {
+      numAttempts--;
+      if (numAttempts === 0) {
         console.log("You lose");
         rl.close();
       } else {
@@ -54,4 +59,4 @@ const askGuess = () => {
   });
 };
 
-return askRange();
+return askLimit();
