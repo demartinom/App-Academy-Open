@@ -47,7 +47,7 @@ const askGuess = () => {
     if (checkGuess(Number(answer)) === true) {
       console.log("You win!");
       rl.close();
-    } else if (checkGuess(Number(answer)) === false) {
+    } else {
       numAttempts--;
       if (numAttempts === 0) {
         console.log("You lose");
