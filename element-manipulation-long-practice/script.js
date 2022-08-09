@@ -14,12 +14,14 @@ const newFunctions = () => {
     name.setAttribute("id", "list");
   };
 
-  const addLI = () => {
+  const addLI = (text) => {
     const list = document.querySelector("ul");
-    
+    newElement = document.createElement("li");
+    newElement.innerText = text;
+    list.appendChild(newElement);
   };
-  addName()
-  addUL()
-  addLI()
+  addName();
+  addUL();
+  addLI("I live in America");
 };
 window.onload = newFunctions;
