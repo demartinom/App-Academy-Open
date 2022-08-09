@@ -1,0 +1,10 @@
+h1 {
+  color: green;
+  padding: 3px;
+}
+ul {
+  border: 2px solid blue;
+}
+li:hover {
+  color: red;
+}
