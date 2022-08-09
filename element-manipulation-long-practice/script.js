@@ -5,13 +5,14 @@ const newFunctions = () => {
     document.body.appendChild(newElement);
     let name = document.querySelector("h1");
     name.setAttribute("id", "name");
+    name.setAttribute("class", "name");
   };
 
   const addUL = () => {
     const newElement = document.createElement("ul");
     document.body.appendChild(newElement);
     let name = document.querySelector("ul");
-    name.setAttribute("id", "list");
+    name.setAttribute("class", "my-details");
   };
 
   const addLI = (array) => {
@@ -19,10 +20,10 @@ const newFunctions = () => {
       const list = document.querySelector("ul");
       newElement = document.createElement("li");
       newElement.innerText = element;
+      newElement.setAttribute("class", "detail");
       list.appendChild(newElement);
     });
   };
-
   addName();
   addUL();
   addLI([
