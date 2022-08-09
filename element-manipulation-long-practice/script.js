@@ -23,5 +23,8 @@ const newFunctions = () => {
   addName();
   addUL();
   addLI("I live in America");
+  addLI("I have a dog");
+  addLI("I like to read");
+  addLI("I hope to become a front-end developer");
 };
 window.onload = newFunctions;
