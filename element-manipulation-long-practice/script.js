@@ -24,6 +24,13 @@ const newFunctions = () => {
       list.appendChild(newElement);
     });
   };
+  const clock = () => {
+    let clockDiv = document.createElement("div");
+    setInterval(() => {
+      clockDiv.innerHTML = Date();
+    }, 1000);
+    document.body.appendChild(clockDiv);
+  };
   addName();
   addUL();
   addLI([
@@ -32,5 +39,7 @@ const newFunctions = () => {
     "I like to read",
     "I hope to become a front-end developer",
   ]);
+  clock();
 };
+
 window.onload = newFunctions;
